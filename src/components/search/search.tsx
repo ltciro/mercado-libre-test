@@ -32,6 +32,7 @@ export function Search({ path, param }: Readonly<ISearch>) {
           name={param}
           defaultValue={searchParam}
           placeholder="Nunca dejes de buscar"
+          autoComplete="off"
         />
         <button className={classes.button} type="submit">
           <div
