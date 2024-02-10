@@ -1,0 +1,18 @@
+.search {
+  display: flex;
+  width: 80vw;
+  height: 35px;
+}
+
+.form {
+  display: flex;
+  flex: auto;
+}
+
+.input {
+  flex: auto;
+}
+
+.button {
+  width: 50px;
+}
