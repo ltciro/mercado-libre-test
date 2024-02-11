@@ -1,14 +1,14 @@
 import React from "react";
 import Image from "next/image";
 
-import { LOGO_SMALL } from "@meli/shared/constant/images-src";
+import { LOGO_SMALL } from "@meli/constant/images-src";
 import Link from "next/link";
 
 interface ILogoSmall {
   priority: boolean;
 }
 
-export function LogoSmall({ priority = false }: Readonly<ILogoSmall>) {
+export default function LogoSmall({ priority = false }: Readonly<ILogoSmall>) {
   return (
     <Link href={"/"}>
       <Image

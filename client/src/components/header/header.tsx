@@ -6,7 +6,7 @@ interface IHeader {
   children: ReactNode;
 }
 
-export function Header({ children }: Readonly<IHeader>) {
+export default function Header({ children }: Readonly<IHeader>) {
   return (
     <header role="banner" className={classes.header}>
       {children}

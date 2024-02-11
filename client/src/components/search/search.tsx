@@ -9,7 +9,7 @@ interface ISearch {
   param: string;
 }
 
-export function Search({ path, param }: Readonly<ISearch>) {
+export default function Search({ path, param }: Readonly<ISearch>) {
   const router = useRouter();
   const searchParams = useSearchParams();
   const searchParam = searchParams.get(param) ?? "";
@@ -34,7 +34,11 @@ export function Search({ path, param }: Readonly<ISearch>) {
           placeholder="Nunca dejes de buscar"
           autoComplete="off"
         />
-        <button className={classes.button} type="submit">
+        <button
+          className={classes.button}
+          type="submit"
+          onClick={(e) => e.stopPropagation()}
+        >
           <div
             role="img"
             aria-label="Buscar"
