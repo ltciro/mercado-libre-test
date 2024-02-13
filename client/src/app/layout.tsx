@@ -25,7 +25,7 @@ export default function RootLayout({
     <html lang="es">
       <body className={inter.className}>
         <Header>
-          <LogoSmall priority={true} />
+          <LogoSmall />
           <Search path="items" param="search" />
         </Header>
         {children}

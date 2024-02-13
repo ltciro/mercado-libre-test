@@ -4,13 +4,7 @@ import Link from "next/link";
 
 import { LOGO_SMALL } from "@meli/shared/constant/images-src";
 
-interface LogoSmallProps {
-  priority: boolean;
-}
-
-export default function LogoSmall({
-  priority = false,
-}: Readonly<LogoSmallProps>) {
+export default function LogoSmall() {
   return (
     <Link href={"/"}>
       <Image
@@ -18,7 +12,6 @@ export default function LogoSmall({
         alt="Mercado Libre Logo"
         width={44}
         height={32}
-        priority={priority}
       ></Image>
     </Link>
   );

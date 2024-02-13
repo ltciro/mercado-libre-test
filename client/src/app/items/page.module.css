@@ -1,0 +1,16 @@
+.row {
+  margin: 10px 10px 0;
+  border-bottom: #fafafa 2px solid;
+}
+
+.cardSubtitle {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  margin-bottom: 15px;
+}
+
+.cardHeading {
+  font-size: 14px;
+  font-weight: 400;
+}

@@ -1,3 +1,5 @@
+import { currencies } from "../utils/currency-format";
+
 export interface Items {
   categories: string[];
   items: Item[];
@@ -15,7 +17,7 @@ export interface Item {
 }
 
 interface Price {
-  currency: string;
+  currency: currencies;
   amount: number;
   decimals: number;
 }

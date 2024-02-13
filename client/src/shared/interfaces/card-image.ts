@@ -1,13 +1,10 @@
+import { Sizes } from "./card";
+
 export interface CardImageProps {
   url: string;
   size: Sizes;
   alt?: string;
   style?: React.CSSProperties
-}
-export enum Sizes {
-  small = "small",
-  medium = "medium",
-  large = "large",
 }
 
 export interface ImageSize {

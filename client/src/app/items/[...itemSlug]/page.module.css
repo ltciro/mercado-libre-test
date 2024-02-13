@@ -1,0 +1,22 @@
+.cardHeading {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.cardSubtitle {
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.cardBodyTitle {
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.cardBodyP {
+  font-size: 12px;
+  font-weight: 400;
+  color: rgba(var(--color-secondary-rgba));
+  line-height: 15px;
+}

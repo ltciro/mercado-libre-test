@@ -10,7 +10,8 @@ const getItemDetail = (item, description) => {
     ...commonProperties(item),
     picture: item.pictures?.[0]?.url || item.thumbnail,
     sold_quantity: item.sold_quantity,
-    description: description?.plain_text ?? "",
+    description:
+      description?.plain_text || "No se ha especificado la descripción.",
   };
 };
 

@@ -1,27 +1,33 @@
+import { Sizes } from "@meli/shared/interfaces/card";
 import React from "react";
+
+import classes from "./price.module.css";
+import { currencies, currencyFormat } from "@meli/shared/utils/currency-format";
 
 interface PriceProps {
   price: number;
+  currency: currencies;
+  size?: Sizes;
   decimal?: number;
-  currency?: string;
 }
-const currencySymbol: { [key: string]: string } = {
-  ARS: "$",
-};
 
 export default function Price({
   price,
   decimal,
   currency,
+  size = Sizes.medium,
 }: Readonly<PriceProps>) {
-  const symbol = currency ? currencySymbol[currency] : "";
+  const priceFormatted = currencyFormat(currency, price);
   return (
-    <div>
-      <p>
-        <span>{symbol}</span>
-        {price}
-        {decimal && <span>{decimal}</span>}
+    <>
+      <p className={`${classes.price} ${classes[`price--${size}`]}`}>
+        {priceFormatted}
+        {decimal && (
+          <span className={`${classes.decimal} ${classes[`decimal--${size}`]}`}>
+            {decimal}
+          </span>
+        )}
       </p>
-    </div>
+    </>
   );
 }

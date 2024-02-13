@@ -1,0 +1,14 @@
+.main {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  width: 65vw;
+  background-color: rgb(var(--foreground-rgb));
+  border-radius: 4px;
+  box-shadow: rgba(var(--box-shadow-rgba)) 0px 8px 24px;
+}

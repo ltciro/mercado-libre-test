@@ -3,10 +3,12 @@
     "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
     "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
 
-  --foreground-rgb: 0, 0, 0;
+  --foreground-rgb: 255, 255, 255;
   --background-rgb: 235, 235, 235;
   --primary-color-rgb:  255, 230, 0;
-  --color-rgb: 74, 74, 74
+  --color-primary-rgb: 0, 0, 0;
+  --color-secondary-rgba: 185, 185, 185, 1;
+  --box-shadow-rgba: 149, 157, 165, 0.2;
 }
 
 * {
@@ -159,7 +161,7 @@ body {
 }
 
 body {
-  color: rgb(var(--color-rgb));
+  color: rgb(var(--color-primary-rgb));
   background-color: rgb(var(--background-rgb));
 }
 
