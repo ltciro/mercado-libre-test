@@ -1,13 +1,14 @@
 const getItem = (item) => {
   return {
     ...commonProperties(item),
-    picture: item.thumbnail,
   };
 };
 
 const getItemDetail = (item, description) => {
+  console.log(item.pictures?.[0]?.url);
   return {
     ...commonProperties(item),
+    picture: item.pictures?.[0]?.url || item.thumbnail,
     sold_quantity: item.sold_quantity,
     description: description?.plain_text ?? "",
   };

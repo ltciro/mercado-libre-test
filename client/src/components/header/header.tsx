@@ -2,11 +2,11 @@ import React, { ReactNode } from "react";
 
 import classes from "./header.module.css";
 
-interface IHeader {
+interface HeaderProps {
   children: ReactNode;
 }
 
-export default function Header({ children }: Readonly<IHeader>) {
+export default function Header({ children }: Readonly<HeaderProps>) {
   return (
     <header role="banner" className={classes.header}>
       {children}

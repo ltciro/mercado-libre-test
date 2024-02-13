@@ -4,12 +4,12 @@ import { useRouter, useSearchParams } from "next/navigation";
 
 import classes from "./search.module.css";
 
-interface ISearch {
+interface SearchProps {
   path: string;
   param: string;
 }
 
-export default function Search({ path, param }: Readonly<ISearch>) {
+export default function Search({ path, param }: Readonly<SearchProps>) {
   const router = useRouter();
   const searchParams = useSearchParams();
   const searchParam = searchParams.get(param) ?? "";
