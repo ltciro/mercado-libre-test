@@ -7,8 +7,21 @@
 }
 
 .wrapper {
-  width: 65vw;
+  width: 90vw;
   background-color: rgb(var(--foreground-rgb));
   border-radius: 4px;
   box-shadow: rgba(var(--box-shadow-rgba)) 0px 8px 24px;
+}
+/* Media Query for Laptops and Desktops */
+@media (min-width: 1024px) and (max-width: 1400px){
+  .wrapper {
+    width: 70vw;
+  }
+}
+  
+/* Media Query for Large screens */
+@media (min-width: 1401px) {
+  .wrapper {
+    width: 50vw;
+  }
 }

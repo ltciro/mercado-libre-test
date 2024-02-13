@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { CardImageProps, ImageSize } from "@meli/shared/interfaces/card-image";
+import { Sizes } from "@meli/shared/interfaces/card";
 
 const IMAGE_SIZE: ImageSize = {
   small: {
@@ -24,6 +25,7 @@ export default function CardImage({
   style,
 }: Readonly<CardImageProps>) {
   const dimension = IMAGE_SIZE[size] ?? IMAGE_SIZE.small;
+  const priority = size === Sizes.large || size === Sizes.medium;
   return (
     <Image
       src={url}
@@ -32,6 +34,7 @@ export default function CardImage({
       height={dimension.height}
       quality={100}
       style={{ ...style, objectFit: "contain" }}
+      priority={priority}
     ></Image>
   );
 }

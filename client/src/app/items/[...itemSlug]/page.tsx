@@ -11,6 +11,7 @@ import { Sizes } from "@meli/shared/interfaces/card";
 import { CardVariation } from "@meli/shared/interfaces/card";
 
 import classes from "./page.module.css";
+import CardActions from "@meli/components/card-actions/card-actions";
 
 interface ItemProps {
   params: {
@@ -20,6 +21,7 @@ interface ItemProps {
 
 export default async function Item({ params }: Readonly<ItemProps>) {
   const item = await getItem(params.itemSlug);
+  const button = { text: "Comprar" };
 
   return (
     <>
@@ -45,6 +47,7 @@ export default async function Item({ params }: Readonly<ItemProps>) {
             <h3 className={classes.cardBodyTitle}>Descripción del producto</h3>
             <p className={classes.cardBodyP}>{item.description}</p>
           </CardBody>
+          <CardActions button={button} />
         </Card>
       )}
     </>

@@ -15,8 +15,8 @@
 }
 
 .cardBodyP {
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 400;
-  color: rgba(var(--color-secondary-rgba));
+  color: rgb(var(--color-secondary-rgb));
   line-height: 15px;
 }

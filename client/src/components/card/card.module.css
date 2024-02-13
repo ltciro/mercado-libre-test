@@ -13,12 +13,25 @@
 }
 
 .cardDetail {
-  grid-template-areas: 
-    "media title"
-    "media title"
-    "media actions"
-    "body -";
-  grid-template-columns: 2fr 1fr;
+  grid-template-areas:
+  "media"
+  "title"
+  "actions"
+  "body ";
+  grid-template-columns: auto;
+  grid-template-rows: auto;
   padding: 10px;
   margin: 15px;
+}
+/* Media Query for Laptops and Desktops, Large screens */
+@media (min-width: 1024px){
+  .cardDetail {
+    grid-template-areas: 
+      "media title"
+      "media gap"
+      "media actions"
+      "body -";
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: min-content  20px 1fr auto;
+  }
 }
