@@ -6,9 +6,9 @@
 
 .cardRow {
   grid-template-areas: 
-    "media title"
     "media title";
   grid-template-columns: 110px 1fr;
+  grid-template-rows: min-content;
   padding: 10px;
 }
 
@@ -19,10 +19,11 @@
   "actions"
   "body ";
   grid-template-columns: auto;
-  grid-template-rows: auto;
+  grid-template-rows: 300px;
   padding: 10px;
-  margin: 15px;
+  margin: 5px;
 }
+
 /* Media Query for Laptops and Desktops, Large screens */
 @media (min-width: 1024px){
   .cardDetail {
@@ -32,6 +33,10 @@
       "media actions"
       "body -";
     grid-template-columns: 2fr 1fr;
-    grid-template-rows: min-content  20px 1fr auto;
+    grid-template-rows:  min-content  20px 300px auto;
+    margin: 15px;
+  }
+  .cardRow {
+    grid-template-rows: 100px;
   }
 }

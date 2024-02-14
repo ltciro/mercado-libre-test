@@ -19,4 +19,12 @@
   font-weight: 400;
   color: rgb(var(--color-secondary-rgb));
   line-height: 15px;
+  text-wrap: wrap;
+  word-break: break-all;
+}
+
+@media (min-width: 1024px) {
+  .cardBodyP {
+    word-break: normal;
+  }
 }

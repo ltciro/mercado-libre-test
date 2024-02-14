@@ -22,13 +22,14 @@ interface ItemProps {
 export default async function Item({ params }: Readonly<ItemProps>) {
   const item = await getItem(params.itemSlug);
   const button = { text: "Comprar" };
+  const cardImgSizes = "(max-width: 768px) 300px, 500px";
 
   return (
     <>
       {item && (
         <Card key={item.id} variation={CardVariation.detail}>
           <CardMedia
-            image={{ url: item?.picture, size: Sizes.large }}
+            image={{ url: item?.picture, priority: true, sizes: cardImgSizes }}
           ></CardMedia>
           <CardTitle>
             <p className={classes.cardSubtitle}>

@@ -23,17 +23,18 @@ interface ItemsProps {
 export default async function Items({ searchParams }: Readonly<ItemsProps>) {
   const data = await getItems(searchParams.search);
   const items = data?.items ?? [];
+  const cardImgSizes = "110px";
   return (
     <>
       <ul>
-        {items.map((item: Item) => (
-          <li className={classes.row}>
+        {items.map((item: Item, i: number) => (
+          <li key={i} className={classes.row}>
             <Link href={`/items/${item.id}`}>
               <Card key={item.id} variation={CardVariation.row}>
                 <CardMedia
                   image={{
                     url: item.picture,
-                    size: Sizes.small,
+                    sizes: cardImgSizes,
                   }}
                 ></CardMedia>
                 <CardTitle>
