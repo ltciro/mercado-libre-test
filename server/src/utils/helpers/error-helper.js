@@ -5,11 +5,7 @@ export default (code, req, errorMessage) => {
   let key = code;
   if (!es[code]) key = "00008";
   const esMessage = es[key];
-  if (esMessage.includes("internal error")) {
-    console.log(code, errorMessage, "Server Error", req);
-  } else {
-    console.log(code, errorMessage ?? esMessage, "Client Error", req);
-  }
+  console.log(code, errorMessage);
 
   return {
     resultMessage: {

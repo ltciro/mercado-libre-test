@@ -5,7 +5,6 @@ const getItem = (item) => {
 };
 
 const getItemDetail = (item, description) => {
-  console.log(item.pictures?.[0]?.url);
   return {
     ...commonProperties(item),
     picture: item.pictures?.[0]?.url || item.thumbnail,
@@ -38,8 +37,11 @@ const getCategories = (filters) => {
   const {
     values: [{ path_from_root }],
   } = filters.find((filter) => filter.id === "category");
+  return getPathCategories(path_from_root);
+};
 
-  return path_from_root.map((category) => category.name);
+const getPathCategories = (path) => {
+  return path.map((category) => category.name);
 };
 
 const getCondition = (attributes) => {
@@ -58,4 +60,4 @@ const getDecimals = (price) => {
   return price.toString().split(".")[1] ?? 0;
 };
 
-export { getCategories, getItem, getItemDetail };
+export { getCategories, getItem, getItemDetail, getPathCategories };

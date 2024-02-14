@@ -7,4 +7,5 @@ export const itemsUrls = {
     item: (id) => `${backendUrl}/items/${id}`,
     description: (id) => `${backendUrl}/items/${id}/description`,
   },
+  categories: (id) => `${backendUrl}/categories/${id}`,
 };

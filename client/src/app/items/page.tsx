@@ -12,6 +12,7 @@ import { Item } from "@meli/shared/interfaces/items";
 import { CardVariation } from "@meli/shared/interfaces/card";
 import CardWrapper from "@meli/components/card-wrapper/card-wrapper";
 import Breadcrumb from "@meli/components/breadcrumb/breadcrumb";
+import ErrorMessage from "@meli/components/error-message/error-message";
 
 import classes from "./page.module.css";
 
@@ -22,8 +23,17 @@ interface ItemsProps {
 }
 
 export default async function Items({ searchParams }: Readonly<ItemsProps>) {
-  const data = await getItems(searchParams.search);
-  const items = data?.items ?? [];
+  const response = await getItems(searchParams.search);
+
+  if (!response) {
+    return <ErrorMessage />;
+  }
+  const { data, resultMessage } = response;
+  if (!data) {
+    return <ErrorMessage message={resultMessage} />;
+  }
+
+  const items = data.items ?? [];
   const cardImgSizes = "110px";
   return (
     <>
