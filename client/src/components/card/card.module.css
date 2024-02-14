@@ -33,7 +33,7 @@
       "media actions"
       "body -";
     grid-template-columns: 2fr 1fr;
-    grid-template-rows:  min-content  20px 300px auto;
+    grid-template-rows:  min-content  20px 40vh auto;
     margin: 15px;
   }
   .cardRow {

@@ -1,11 +1,9 @@
-import React, { ReactNode } from "react";
-
 import { CardVariation } from "@meli/shared/interfaces/card";
 
 import classes from "./card.module.css";
 
 interface CardProps {
-  children: ReactNode;
+  children: React.ReactNode;
   variation: CardVariation;
 }
 

@@ -6,8 +6,8 @@ export default function ItemLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <main className={classes.main}>
+    <div className={classes.container}>
       <div className={classes.wrapper}>{children}</div>
-    </main>
+    </div>
   );
 }

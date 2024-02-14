@@ -1,8 +1,7 @@
 import { Sizes } from "@meli/shared/interfaces/card";
-import React from "react";
+import { currencies, currencyFormat } from "@meli/shared/utils/currency-format";
 
 import classes from "./price.module.css";
-import { currencies, currencyFormat } from "@meli/shared/utils/currency-format";
 
 interface PriceProps {
   price: number;

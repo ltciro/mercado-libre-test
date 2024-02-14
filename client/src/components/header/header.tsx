@@ -1,9 +1,7 @@
-import React, { ReactNode } from "react";
-
 import classes from "./header.module.css";
 
 interface HeaderProps {
-  children: ReactNode;
+  children: React.ReactNode;
 }
 
 export default function Header({ children }: Readonly<HeaderProps>) {

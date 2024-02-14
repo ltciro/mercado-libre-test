@@ -1,0 +1,5 @@
+.cardWrapper {
+  background-color: rgb(var(--foreground-rgb));
+  border-radius: 4px;
+  box-shadow: rgba(var(--box-shadow-rgba)) 0px 8px 24px;
+}

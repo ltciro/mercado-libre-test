@@ -1,5 +1,4 @@
 "use client";
-import React from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 
 import classes from "./search.module.css";

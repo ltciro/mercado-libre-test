@@ -1,9 +1,7 @@
-import React, { ReactNode } from "react";
-
 import classes from "./card-title.module.css";
 
 interface CardTitleProps {
-  children: ReactNode;
+  children: React.ReactNode;
 }
 
 export default function CardTitle({ children }: Readonly<CardTitleProps>) {

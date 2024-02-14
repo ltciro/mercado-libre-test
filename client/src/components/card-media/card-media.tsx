@@ -1,4 +1,3 @@
-import React from "react";
 import CardImage from "./card-image/card-image";
 import { CardImageProps } from "@meli/shared/interfaces/card-image";
 
