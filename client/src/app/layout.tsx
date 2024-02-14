@@ -1,3 +1,5 @@
+import { Suspense } from "react";
+
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 
@@ -26,7 +28,9 @@ export default function RootLayout({
       <body className={inter.className}>
         <Header>
           <LogoSmall />
-          <Search path="items" param="search" />
+          <Suspense>
+            <Search path="items" param="search" />
+          </Suspense>
         </Header>
         {children}
       </body>

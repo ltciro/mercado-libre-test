@@ -6,9 +6,9 @@
   --foreground-rgb: 255, 255, 255;
   --background-rgb: 235, 235, 235;
   --primary-color-rgb:  255, 230, 0;
-  --acent-bg-color-rgb:  0, 133, 225;
+  --acent-bg-color-rgb:  0, 113, 177;
   --color-primary-rgb: 0, 0, 0;
-  --color-secondary-rgb: 176, 176, 176;
+  --color-secondary-rgb: 102, 102, 102;
   --color-acent-rgb: 255, 255, 255;
   --box-shadow-rgba: 149, 157, 165, 0.2;
 }

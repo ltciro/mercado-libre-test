@@ -11,6 +11,7 @@ export default function LogoSmall() {
         alt="Mercado Libre Logo"
         width={44}
         height={32}
+        priority
       ></Image>
     </Link>
   );
