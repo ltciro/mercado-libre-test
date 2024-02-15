@@ -175,3 +175,12 @@ a {
 input {
   padding: 10px;
 }
+
+.center-message-page {
+  display: flex;
+  justify-content: center;
+  height: 90vh;
+  flex-direction: column;
+  text-align: center;
+  gap: 24px;  
+}
