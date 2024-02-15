@@ -17,7 +17,7 @@
 .cardBodyP {
   font-size: 13px;
   font-weight: 400;
-  color: rgb(var(--color-secondary-rgb));
+  color: rgb(var(--color-secondary-100-rgb));
   line-height: 15px;
   text-wrap: wrap;
   word-break: break-all;

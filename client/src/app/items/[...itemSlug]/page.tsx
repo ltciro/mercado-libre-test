@@ -1,7 +1,5 @@
 import { getItem } from "@meli/services/client";
 
-import { Item } from "@meli/shared/interfaces/items";
-
 import Breadcrumb from "@meli/components/breadcrumb/breadcrumb";
 import ErrorMessage from "@meli/components/error-message/error-message";
 import ItemDetail from "@meli/components/item-detail/item-detail";
