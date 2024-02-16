@@ -5,7 +5,7 @@ export default (code, req, errorMessage) => {
   let key = code;
   if (!es[code]) key = "00008";
   const esMessage = es[key];
-  console.log(code, errorMessage);
+  console.log(code, esMessage, errorMessage);
 
   return {
     resultMessage: {

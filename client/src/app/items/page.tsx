@@ -13,6 +13,12 @@ interface ItemsProps {
 export default async function ItemsPage({
   searchParams,
 }: Readonly<ItemsProps>) {
+  if (!searchParams.search) {
+    return (
+      <ErrorMessage message={{ es: "No encontramos el termino buscado." }} />
+    );
+  }
+
   const response = await getItems(searchParams.search);
 
   if (!response) {
