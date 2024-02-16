@@ -54,6 +54,8 @@ npm run test
 
 ### Client
 
+Se uso NextJS, app router de nextjs. Las paginas son server component, y el componente search es client component.
+
 Carpetas:
 
 - app : contiene las páginas; loding, layouts, not-found, home, items , item y sus respectivos tests.
