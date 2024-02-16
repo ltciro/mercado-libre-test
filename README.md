@@ -1,6 +1,7 @@
 # Test Práctico - Frontend
 
 Test Práctico - Frontend para mercado libre
+Por Laura Tatiana Ciro
 
 ## Correr el proyecto
 
