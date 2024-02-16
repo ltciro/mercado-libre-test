@@ -15,7 +15,7 @@ export default function CardMedia({ image }: Readonly<CardMediaProps>) {
       {image && (
         <CardImage
           url={image.url}
-          alt={image.alt || "Card Image"}
+          alt={image.alt}
           priority={image.priority}
           sizes={image.sizes}
           style={{ ...imageDefaultStyle, ...image.style }}

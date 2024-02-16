@@ -15,7 +15,7 @@ interface ItemsProps {
   items: Item[];
 }
 
-export default async function Items({ items }: Readonly<ItemsProps>) {
+export default function Items({ items }: Readonly<ItemsProps>) {
   const cardImgSizes = "110px";
   return (
     <CardWrapper>
@@ -28,14 +28,17 @@ export default async function Items({ items }: Readonly<ItemsProps>) {
                   image={{
                     url: item.picture,
                     sizes: cardImgSizes,
+                    alt: `Image for ${item.title}`,
                   }}
                 ></CardMedia>
                 <CardTitle>
                   <div className={classes.cardSubtitle}>
-                    <Price
-                      price={item.price.amount}
-                      currency={item.price.currency}
-                    ></Price>
+                    {item.price && (
+                      <Price
+                        price={item.price.amount}
+                        currency={item.price.currency}
+                      ></Price>
+                    )}
                     {item.free_shipping && <FreeShipping />}
                   </div>
                   <h2 className={classes.cardHeading}>{item.title}</h2>

@@ -4,8 +4,6 @@ import Breadcrumb from "@meli/components/breadcrumb/breadcrumb";
 import ErrorMessage from "@meli/components/error-message/error-message";
 import Items from "@meli/components/items/items";
 
-import classes from "./page.module.css";
-
 interface ItemsProps {
   searchParams: {
     search: string;
@@ -26,10 +24,13 @@ export default async function ItemsPage({
   }
 
   const items = data.items ?? [];
+  const categories = data.categories;
 
   return (
     <>
-      {data && <Breadcrumb breadcrumbs={data?.categories}></Breadcrumb>}
+      {!!categories?.length && (
+        <Breadcrumb breadcrumbs={data.categories}></Breadcrumb>
+      )}
       <main>
         <Items items={items} />
       </main>

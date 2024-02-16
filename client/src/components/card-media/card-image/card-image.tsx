@@ -12,15 +12,17 @@ export default function CardImage({
 }: Readonly<CardImageProps>) {
   return (
     <div className={classes.carImageWrapper}>
-      <Image
-        src={url}
-        alt={alt || "Card Image"}
-        fill
-        quality={100}
-        style={{ ...style, objectFit: "contain" }}
-        priority={priority}
-        sizes={sizes}
-      ></Image>
+      {url && (
+        <Image
+          src={url}
+          alt={alt || "Card Image"}
+          fill
+          quality={100}
+          style={{ ...style, objectFit: "contain" }}
+          priority={priority}
+          sizes={sizes}
+        ></Image>
+      )}
     </div>
   );
 }

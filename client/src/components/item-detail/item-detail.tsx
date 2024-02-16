@@ -15,7 +15,7 @@ interface ItemDetailProps {
   item: Item;
 }
 
-export default async function ItemDetail({ item }: Readonly<ItemDetailProps>) {
+export default function ItemDetail({ item }: Readonly<ItemDetailProps>) {
   const button = { text: "Comprar" };
   const cardImgSizes = "(max-width: 768px) 300px, 500px";
   return (
@@ -34,12 +34,14 @@ export default async function ItemDetail({ item }: Readonly<ItemDetailProps>) {
             {item.sold_quantity && <span> - {item.sold_quantity}</span>}
           </p>
           <h2 className={classes.cardHeading}>{item.title}</h2>
-          <Price
-            price={item.price.amount}
-            decimal={item.price.decimals}
-            currency={item.price.currency}
-            size={Sizes.large}
-          ></Price>
+          {item.price && (
+            <Price
+              price={item.price.amount}
+              decimal={item.price.decimals}
+              currency={item.price.currency}
+              size={Sizes.large}
+            ></Price>
+          )}
         </CardTitle>
         <CardBody>
           <h3 className={classes.cardBodyTitle}>Descripción del producto</h3>

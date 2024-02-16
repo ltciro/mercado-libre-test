@@ -27,7 +27,6 @@ export interface Item {
   picture: string;
   condition: string;
   free_shipping: boolean;
-  permalink: string;
   sold_quantity?: number;
   description?: string
 }

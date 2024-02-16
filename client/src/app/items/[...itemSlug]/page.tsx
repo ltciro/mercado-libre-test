@@ -4,7 +4,7 @@ import Breadcrumb from "@meli/components/breadcrumb/breadcrumb";
 import ErrorMessage from "@meli/components/error-message/error-message";
 import ItemDetail from "@meli/components/item-detail/item-detail";
 
-interface ItemProps {
+export interface ItemProps {
   params: {
     itemSlug: string;
   };
@@ -12,6 +12,7 @@ interface ItemProps {
 
 export default async function ItemPage({ params }: Readonly<ItemProps>) {
   const response = await getItem(params.itemSlug);
+
   if (!response) {
     return <ErrorMessage />;
   }
@@ -26,7 +27,7 @@ export default async function ItemPage({ params }: Readonly<ItemProps>) {
   return (
     <>
       {!!categories?.length && (
-        <Breadcrumb breadcrumbs={data?.categories ?? []}></Breadcrumb>
+        <Breadcrumb breadcrumbs={data.categories}></Breadcrumb>
       )}
       <main>{item && <ItemDetail item={item} />}</main>
     </>

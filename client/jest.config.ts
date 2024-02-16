@@ -15,6 +15,19 @@ const config: Config = {
   moduleNameMapper: {
     // ...
     '^@meli/(.*)$': '<rootDir>/src/$1',
+  },
+  collectCoverage: true,
+  collectCoverageFrom: ["./src/**"],
+  coveragePathIgnorePatterns: [
+    "./src/shared/interfaces",
+    "config.ts",
+    "./src/shared/constant",
+    "./src/shared/utils/tests.ts"
+  ],
+  coverageThreshold: {
+    global: {
+      lines: 80
+    }
   }
 };
 

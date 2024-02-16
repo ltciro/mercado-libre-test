@@ -7,7 +7,7 @@ async function getItems(search: Readonly<string>): Promise<responseItems | undef
     const { data, resultMessage } = await response.json();
     return { data, resultMessage };
   } catch (error) {
-    console.log(error)
+    console.log('TODO Logger',error);
   }
 }
 
@@ -17,7 +17,7 @@ async function getItem(id: Readonly<string>): Promise<responseItem | undefined> 
     const { data, resultMessage } = await response.json();
     return  { data, resultMessage };
   } catch (error) {
-    console.log(error)
+    console.log('TODO Logger',error);
   }
 }
 
